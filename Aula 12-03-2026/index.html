@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ecommerce imobiliário com imóveis residenciais e comerciais para compra e aluguel. Encontre apartamentos, casas e salas comerciais nas melhores regiões.">
+  <title>ImobiCasa - Ecommerce Imobiliário - Matheus Farias Porto Dos Anjos</title>
+
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index,follow">
+
+  <link rel="canonical" href="https://www.exemplo-imobicase.com/">
+</head>
+<body>
+  <a href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+  <header>
+    <div>
+      <h1>ImobiCasa</h1>
+      <p>Seu marketplace de imóveis para comprar e alugar.</p>
+    </div>
+
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#imoveis-destaque">Imóveis em destaque</a></li>
+        <li><a href="#categorias">Categorias</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo-principal">
+    <section aria-labelledby="busca-titulo">
+      <header>
+        <h2 id="busca-titulo">Busque o imóvel ideal</h2>
+        <p>Filtre por tipo de imóvel, finalidade e localização.</p>
+      </header>
+
+      <form action="#" method="get">
+        <fieldset>
+          <legend>Tipo de transação</legend>
+          <label>
+            <input type="radio" name="tipo-transacao" value="compra">
+            Comprar
+          </label>
+          <label>
+            <input type="radio" name="tipo-transacao" value="aluguel">
+            Alugar
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Detalhes do imóvel</legend>
+
+          <label for="tipo-imovel">Tipo de imóvel</label>
+          <select id="tipo-imovel" name="tipo-imovel">
+            <option value="">Selecione</option>
+            <option value="apartamento">Apartamento</option>
+            <option value="casa">Casa</option>
+            <option value="studio">Studio</option>
+            <option value="comercial">Sala comercial</option>
+          </select>
+
+          <label for="cidade">Cidade</label>
+          <input id="cidade" name="cidade" type="text" placeholder="Ex.: São Paulo" autocomplete="address-level2">
+
+          <label for="faixa-preco">Faixa de preço máxima (R$)</label>
+          <input id="faixa-preco" name="faixa-preco" type="number" min="0" step="50000" inputmode="numeric">
+        </fieldset>
+
+        <button type="submit">Buscar imóveis</button>
+      </form>
+    </section>
+
+    <section id="imoveis-destaque" aria-labelledby="titulo-destaque">
+      <header>
+        <h2 id="titulo-destaque">Imóveis em destaque</h2>
+        <p>Seleção especial de oportunidades para você.</p>
+      </header>
+
+      <section aria-label="Lista de imóveis em destaque">
+        <article>
+          <header>
+            <h3>Apartamento moderno no centro</h3>
+            <p>2 quartos • 75 m² • 1 vaga</p>
+          </header>
+          <figure>
+            <img src="https://via.placeholder.com/400x250" alt="Sala de estar moderna com sofá cinza e grande janela." width="400" height="250">
+            <figcaption>Próximo ao metrô, com varanda gourmet.</figcaption>
+          </figure>
+          <p><strong>R$ 780.000</strong></p>
+          <p>Localização: Centro - São Paulo, SP</p>
+          <ul>
+            <li>Condomínio com área de lazer completa</li>
+            <li>Portaria 24h</li>
+            <li>Pet friendly</li>
+          </ul>
+          <footer>
+            <a href="#contato">Ver detalhes e falar com um consultor</a>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Casa térrea em bairro tranquilo</h3>
+            <p>3 quartos • 150 m² • 2 vagas</p>
+          </header>
+          <figure>
+            <img src="https://via.placeholder.com/400x250" alt="Fachada de casa térrea com jardim e garagem." width="400" height="250">
+            <figcaption>Ideal para famílias que buscam conforto e segurança.</figcaption>
+          </figure>
+          <p><strong>R$ 1.150.000</strong></p>
+          <p>Localização: Vila Verde - Campinas, SP</p>
+          <ul>
+            <li>Quintal amplo com área gourmet</li>
+            <li>Rua arborizada e silenciosa</li>
+            <li>Próxima a escolas e mercados</li>
+          </ul>
+          <footer>
+            <a href="#contato">Ver detalhes e falar com um consultor</a>
+          </footer>
+        </article>
+
+        <article>
+          <header>
+            <h3>Sala comercial mobiliada</h3>
+            <p>40 m² • 1 vaga</p>
+          </header>
+          <figure>
+            <img src="https://via.placeholder.com/400x250" alt="Sala comercial com estações de trabalho e mesa de reuniões." width="400" height="250">
+            <figcaption>Perfeita para pequenos escritórios e startups.</figcaption>
+          </figure>
+          <p><strong>R$ 3.500/mês</strong></p>
+          <p>Localização: Centro Empresarial - Belo Horizonte, MG</p>
+          <ul>
+            <li>Edifício com recepção e segurança</li>
+            <li>Internet de alta velocidade disponível</li>
+            <li>Estacionamento rotativo para visitantes</li>
+          </ul>
+          <footer>
+            <a href="#contato">Ver detalhes e falar com um consultor</a>
+          </footer>
+        </article>
+      </section>
+    </section>
+
+    <section id="categorias" aria-labelledby="titulo-categorias">
+      <header>
+        <h2 id="titulo-categorias">Categorias de imóveis</h2>
+        <p>Encontre mais rápido o tipo de imóvel que você procura.</p>
+      </header>
+
+      <ul>
+        <li>
+          <article>
+            <h3>Apartamentos</h3>
+            <p>Opções em condomínios com lazer completo e segurança.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Casas</h3>
+            <p>Imóveis amplos para quem valoriza espaço e privacidade.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Comerciais</h3>
+            <p>Salas, lojas e galpões em regiões estratégicas da cidade.</p>
+          </article>
+        </li>
+        <li>
+          <article>
+            <h3>Temporada</h3>
+            <p>Imóveis mobiliados para estadias curtas em destinos turísticos.</p>
+          </article>
+        </li>
+      </ul>
+    </section>
+
+    <aside aria-label="Benefícios para clientes">
+      <h2>Por que escolher a ImobiCasa?</h2>
+      <ul>
+        <li>Corretores parceiros avaliados e confiáveis.</li>
+        <li>Documentação acompanhada por especialistas.</li>
+        <li>Comparação clara de preços e condições.</li>
+        <li>Suporte humano em todas as etapas da negociação.</li>
+      </ul>
+    </aside>
+
+    <section id="depoimentos" aria-labelledby="titulo-depoimentos">
+      <header>
+        <h2 id="titulo-depoimentos">Depoimentos de clientes</h2>
+      </header>
+
+      <article>
+        <h3>Maria Oliveira</h3>
+        <p>"Consegui vender meu apartamento em menos de 30 dias com total transparência e segurança."</p>
+      </article>
+
+      <article>
+        <h3>João Santos</h3>
+        <p>"Encontrei a casa perfeita para minha família e todo o processo foi muito bem acompanhado."</p>
+      </article>
+    </section>
+
+    <section id="contato" aria-labelledby="titulo-contato">
+      <header>
+        <h2 id="titulo-contato">Fale com um consultor</h2>
+        <p>Envie seus dados e um especialista entrará em contato com as melhores opções para você.</p>
+      </header>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Dados de contato</legend>
+
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" autocomplete="name" required>
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" autocomplete="tel">
+        </fieldset>
+
+        <fieldset>
+          <legend>Interesse</legend>
+
+          <label for="tipo-interesse">Você deseja</label>
+          <select id="tipo-interesse" name="tipo-interesse" required>
+            <option value="">Selecione</option>
+            <option value="comprar">Comprar imóvel</option>
+            <option value="alugar">Alugar imóvel</option>
+            <option value="vender">Vender imóvel</option>
+          </select>
+
+          <label for="mensagem">Conte um pouco do que procura</label>
+          <textarea id="mensagem" name="mensagem" rows="4"></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar mensagem</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <section aria-label="Informações institucionais">
+      <p><strong>ImobiCasa</strong> &copy; 2026 - Todos os direitos reservados.</p>
+      <p>CNPJ: 00.000.000/0001-00 • CRECI: 00000-J</p>
+    </section>
+
+    <section aria-label="Links de apoio">
+      <nav aria-label="Rodapé">
+        <ul>
+          <li><a href="#contato">Atendimento ao cliente</a></li>
+          <li><a href="#categorias">Encontre seu imóvel</a></li>
+          <li><a href="#depoimentos">Histórias de sucesso</a></li>
+        </ul>
+      </nav>
+    </section>
+  </footer>
+</body>
+</html>
+

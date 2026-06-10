@@ -1,0 +1,99 @@
+/* Componente: Botão (BEM)
+   Bloco: .btn
+   Modificadores: .btn--primary | .btn--outline | .btn--inverse | .btn--ghost | .btn--block
+   Estados: :hover (hover: hover), :active, :focus-visible, :disabled, [aria-disabled="true"]
+   Tokens: --color-action-primary, --color-on-action, --color-highlight, --color-btn-focus-glow
+*/
+
+.btn {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-text);
+  --btn-border: transparent;
+  --btn-bg-hover: transparent;
+  --btn-fg-hover: var(--color-text);
+  --btn-border-hover: transparent;
+  --btn-focus-ring: var(--color-focus-ring);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  padding: var(--space-3) var(--space-5);
+  font-family: inherit;
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  border-radius: var(--radius);
+  border: 2px solid var(--btn-border);
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+@media (hover: hover) {
+  .btn:hover {
+    background: var(--btn-bg-hover);
+    color: var(--btn-fg-hover);
+    border-color: var(--btn-border-hover);
+  }
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn:focus-visible {
+  outline: 3px solid var(--btn-focus-ring);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px var(--color-btn-focus-glow);
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.btn--primary {
+  --btn-bg: var(--color-action-primary);
+  --btn-fg: var(--color-on-action);
+  --btn-border: var(--color-action-primary);
+  --btn-bg-hover: var(--color-action-primary-hover);
+  --btn-fg-hover: var(--color-on-action);
+  --btn-border-hover: var(--color-action-primary-hover);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn--outline {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-highlight);
+  --btn-border: var(--color-highlight);
+  --btn-bg-hover: var(--color-highlight);
+  --btn-fg-hover: var(--color-on-action);
+  --btn-border-hover: var(--color-highlight);
+}
+
+.btn--inverse {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-on-inverse);
+  --btn-border: var(--color-on-inverse-faint);
+  --btn-bg-hover: var(--color-on-inverse-ghost-hover);
+  --btn-fg-hover: var(--color-on-inverse);
+  --btn-border-hover: var(--color-on-inverse);
+}
+
+.btn--ghost {
+  --btn-bg: transparent;
+  --btn-fg: var(--color-highlight);
+  --btn-border: transparent;
+  --btn-bg-hover: var(--color-btn-ghost-hover-bg);
+  --btn-fg-hover: var(--color-brand-hover);
+  --btn-border-hover: transparent;
+}
+
+.btn--block {
+  width: 100%;
+}

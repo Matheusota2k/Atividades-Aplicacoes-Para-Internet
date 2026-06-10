@@ -1,0 +1,129 @@
+/* Componente: Gastronomia
+   Bloco: .gastro-card | Elementos: .gastro-card-media, .gastro-card-body, .tag-pill
+   Container: .gastro-grid (container-name: gastro)
+   Estados: :hover (hover: hover); layout via @container gastro
+   Tokens: --color-gastro-card-bg, --color-on-inverse, --color-gastro-body-muted
+*/
+
+.gastro-lead {
+  max-width: 62ch;
+  margin-inline: auto;
+}
+
+.gastro-intro {
+  max-width: 68ch;
+  margin: 0 auto 2.25rem;
+  text-align: center;
+  color: var(--color-on-inverse-muted);
+  line-height: 1.7;
+}
+
+.gastro-intro p {
+  margin: 0;
+}
+
+.gastro-intro strong {
+  color: var(--color-on-inverse);
+  font-weight: 600;
+}
+
+.gastro-grid {
+  container-type: inline-size;
+  container-name: gastro;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.35rem;
+  margin-bottom: 0.5rem;
+}
+
+.gastro-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-gastro-card-bg);
+  border: 1px solid var(--color-gastro-card-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+  .gastro-card:hover {
+    border-color: var(--color-gastro-card-border-hover);
+    box-shadow: 0 12px 32px var(--color-gastro-shadow);
+  }
+}
+
+@container gastro (min-width: 420px) {
+  .gastro-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .gastro-card-media {
+    width: 38%;
+    max-width: 200px;
+    flex-shrink: 0;
+  }
+
+  .gastro-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.gastro-card-media {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-gastro-media-bg);
+}
+
+.gastro-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gastro-card-body {
+  padding: 1.15rem 1.35rem 1.4rem;
+}
+
+.gastro-card-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: var(--color-on-inverse);
+}
+
+.gastro-card-body p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--color-gastro-body-muted);
+  line-height: 1.55;
+}
+
+.gastro-tags-label {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-on-inverse-subtle);
+  margin: 2rem 0 0.85rem;
+}
+
+.tags-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.tag-pill {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--color-gastro-tag-bg);
+  border: 1px solid var(--color-gastro-tag-border);
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 500;
+}

@@ -1,0 +1,66 @@
+/* Componente: Abas de roteiros
+   Bloco: .tabs | Elementos: .tabs-list, .tab-btn, .tab-panel, .roteiro-list
+   Modificadores: .tab-btn.is-active, .tab-panel.is-active
+   Estados: :hover (hover: hover), .is-active; teclado via JS (aria-selected, hidden)
+   Tokens: --color-brand, --color-surface, --color-border, --color-primary
+*/
+
+.tabs {
+  max-width: 640px;
+  margin-inline: auto;
+}
+
+.tabs-list {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.tab-btn {
+  font-family: inherit;
+  font-size: var(--fs-md);
+  font-weight: var(--font-weight-semibold);
+  padding: 0.55rem 1.2rem;
+  border: 2px solid var(--color-border);
+  background: var(--color-surface);
+  border-radius: var(--radius-ui);
+  cursor: pointer;
+  color: var(--color-text);
+}
+
+@media (hover: hover) {
+  .tab-btn:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+  }
+}
+
+.tab-btn.is-active {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+  color: var(--color-on-action);
+}
+
+.tab-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.roteiro-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.roteiro-list li {
+  margin-bottom: 0.65rem;
+  color: var(--color-muted);
+}
+
+.roteiro-list strong {
+  color: var(--color-text);
+}

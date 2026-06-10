@@ -1,0 +1,40 @@
+/* Componente: Cabeçalho — estado ao rolar
+   Bloco: .site-header | Modificador: .header--scrolled
+   Estados: transição de sombra/padding ao passar de 80px (JS + requestAnimationFrame)
+   Tokens: --color-header-scrolled-shadow, --color-header-scrolled-bg
+*/
+
+/* Transição suave ao entrar no estado .header--scrolled */
+.site-header {
+  transition: box-shadow 0.25s ease, padding 0.25s ease,
+    background-color 0.25s ease;
+}
+
+.site-header.header--scrolled {
+  box-shadow: 0 6px 18px var(--color-header-scrolled-shadow);
+  background-color: var(--color-header-scrolled-bg);
+  backdrop-filter: saturate(140%) blur(6px);
+  -webkit-backdrop-filter: saturate(140%) blur(6px);
+}
+
+.site-header.header--scrolled .header-inner {
+  padding-block: 0.5rem;
+}
+
+.site-header.header--scrolled .logo {
+  font-size: 1rem;
+}
+
+.site-header.header--scrolled .logo-mark {
+  width: 30px;
+  height: 30px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-header,
+  .site-header.header--scrolled .header-inner,
+  .site-header.header--scrolled .logo,
+  .site-header.header--scrolled .logo-mark {
+    transition: none;
+  }
+}
